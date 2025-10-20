@@ -1,0 +1,26 @@
+## for CI pipeline
+# contents for githubactions
+1. app.py 
+2. .github/workflows/run.yml    ##can be found in githubactions->workflows
+3. requirements.txt
+
+# if u want to test app.py before uploading
+4. test_app.py   #test_*.py is necessary, * can be anything
+5. contents of test_app.py : def test_processimage(), def test_main(), assert is used to check if functionality is correct
+6. add pytest in requirements if test_app.py file is added 
+
+## for CD pipeline
+7. Add dockerfile
+8. modify corresponding yml if deployment is to be added     ##can be found in githubactions->workflows
+9. add aws/dockerhub username/password
+
+project/
+├── your_script.py
+├── test_main.py                 
+├── utils/
+│   ├── image_utils.py
+│   └── app_utils.py      
+└── tests/
+│   ├── test_image_utils.py
+│   └── test_app_utils.py      
+├── Dockerfile
